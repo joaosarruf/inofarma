@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/inofarma/static/css/main.025335ea.css",
+    "main.js": "/inofarma/static/js/main.92bd020b.js",
+    "index.html": "/inofarma/index.html",
+    "main.025335ea.css.map": "/inofarma/static/css/main.025335ea.css.map",
+    "main.92bd020b.js.map": "/inofarma/static/js/main.92bd020b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.025335ea.css",
+    "static/js/main.92bd020b.js"
+  ]
+}
