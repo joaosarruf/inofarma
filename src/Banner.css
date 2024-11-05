@@ -1,0 +1,27 @@
+.banner {
+    /* background: url('path/to/banner-image.jpg') center/cover no-repeat; */
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    position: relative;
+    font-size: 2.5rem;
+    z-index: 1;
+}
