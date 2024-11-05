@@ -1,0 +1,227 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Variáveis de cores */
+:root {
+    --primary-color: #261771;  /* Roxo */
+    --secondary-color: #e91e63; /* Rosa */
+    --background-color: #f9f9f9; /* Fundo */
+    --text-color: #333;
+    --button-hover-color: #d81b60;
+    --navbar-color: #0b1a36;
+}
+
+/* Estilo Geral do Body */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header/Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: var(--navbar-color);
+    color: white;
+}
+
+.logo img {
+    max-width: 120px;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: #333;
+    font-size: 16px;
+    background-color: #f1f1f1;
+}
+
+.search-bar input::placeholder {
+    color: #999;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Ícones no Navbar */
+.icon-delivery::before {
+    content: "🚚"; /* Ícone para "Tempos de entrega" */
+    margin-right: 8px;
+}
+
+.icon-login::before {
+    content: "👤"; /* Ícone para "Entrar" */
+    margin-right: 8px;
+}
+
+.icon-cart::before {
+    content: "🛒"; /* Ícone para "Cesta" */
+    margin-right: 8px;
+}
+
+/* Dropdown para "Tempos de entrega" */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: var(--primary-color);
+}
+
+/* Categoria */
+.categories {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.category-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.category-item p {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+/* Banner */
+.banner {
+    background: url('path/to/banner-image.jpg') center/cover no-repeat;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    position: relative;
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.footer {
+    background-color: var(--navbar-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
